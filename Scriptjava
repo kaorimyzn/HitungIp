@@ -1,0 +1,85 @@
+<script>
+    let DDPSKS = Number(prompt ("Masukkan SKS DDP: "));
+    let PPKSKS = Number(prompt ("Masukkan SKS PPK: "));
+        let BINDOSKS = Number(prompt ("Masukkan SKS Bahasa Indonesia: "));
+        let AKSKS =Number(prompt ("Masukkan SKS Arsitektur Komputer: "));
+        let MDSKS =Number(prompt ("Masukkan SKS Matematika Diskrit: "));
+        let AGSKS =Number(prompt ("Masukkan SKS Agama: "));
+        let PRPLSKS =Number(prompt ("Masukkan SKS Pengenalan Rekayasa Perangkat Lunak: "));
+        let PKWSKS = Number(prompt ("Masukkan SKS Entrepreneurship: "));
+        let SDASKS = Number(prompt ("Masukkan SKS Struktur Data & Algoritma Pemrograman: "));
+
+function tampil(mk){
+let nilai = prompt ("Masukkan Nilai "+ mk + " : ");
+let changegrade = nilai.toUpperCase();
+let mutu =Number();
+
+
+switch (changegrade){
+    case 'A':
+                mutu = 4;
+                return mutu;
+                break;
+    case 'B+':
+                mutu = 3.5;
+                return mutu;
+                break;
+    case 'B':
+                mutu = 3;
+                return mutu;
+                break;
+    case 'C':
+                mutu = 2;
+                return mutu;
+                break;
+    case 'D':
+                mutu=1;
+                return mutu
+                break;
+    case 'E':
+                mutu = 0;
+                return mutu;
+                break;
+    default:
+                alert("Error!");
+}
+}
+
+//convert grade ke nilai
+
+let DDP = tampil("DDP");
+let PPK = tampil ("PPK");
+let PKW = tampil ("Entrepreneur");
+let MD = tampil ("Matematika Diskrit")
+let AG= tampil("Agama");
+let BI = tampil ("Bahasa Indonesia");
+let AK = tampil ("Arsitektur Komputer");
+let SDA = tampil ("Struktur Data dan Algoritma");
+let PRPL = tampil ("Pengenalan RPL");
+
+
+//hitung jumlah poin 
+let jumlahpoinDDP = DDPSKS * DDP;
+let jumlahpoinPPK = PPKSKS * PPK;
+let jumlahpoinPRL = PRPLSKS * PRPL;
+let jumlahpoinBI = BINDOSKS * BI;
+let jumlahpoinAK = AKSKS * AK;
+let jumlahpoinMD = MDSKS * MD;
+let jumlahpoinAG = AGSKS * AG;
+let jumlahpoinPKW = PKWSKS * PKW;
+let jumlahpoinSDA = SDASKS * SDA;
+
+// hitung semua poin 
+let jumlahPoin = jumlahpoinSDA + jumlahpoinPRL + jumlahpoinPPK + jumlahpoinPKW + jumlahpoinMD + jumlahpoinDDP + jumlahpoinBI + jumlahpoinAK + jumlahpoinAG;
+
+
+//hitung jumlah seluruh SKS 
+let jumlahSKS = DDPSKS + PPKSKS + PRPLSKS + BINDOSKS + AKSKS + MDSKS + AGSKS + PKWSKS +SDASKS;
+alert (jumlahSKS);
+
+// //hitung 
+
+let hitungIP = jumlahPoin/jumlahSKS;
+alert (hitungIP);
+
+</script>
